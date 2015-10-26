@@ -1,0 +1,153 @@
+//mixins (NEED TO MOVE)
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  background: $color;
+  -webkit-border-radius: $width/2;
+  -moz-border-radius: $width/2;
+  border-radius: $width/2;
+}
+
+
+
+
+//main nav
+.title-bar.primary {
+  border-bottom: none;
+}
+
+.my-sidebar {
+  background: $dark-color;
+  background-color: $dark-color;
+  margin: 0;
+  .badge {
+    @extend .float-left;
+    font-size: 0.7em;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: .5rem;
+  }
+  &--logo {
+    max-width: 8rem;
+    max-height: 3rem;
+    margin: 1.125em 1em 1em;
+  }
+  @include breakpoint(large) {
+    height: 100vh;
+  }
+  ul {
+    border-top: 1px solid (darken($dark-color, 10));
+  }
+}
+
+//my account panel
+.my-account-panel {
+  // Extend the panel selector to get basic structural styles
+  @extend %panel-base;
+  // Use the layout mixin to set the position and sizing
+  @include panel-layout(
+    $position: right, // Can be top, right, bottom, or left
+    $size: default, // Can be any unit, or "default" to use the settings variables
+    $shadow: 0 4px 10px black // The shadow will be auto-adjusted based on the position of the panel
+    );
+  // Use the style mixin to define visual styles
+  @include panel-style(
+    $padding: 0,
+    $background: $gray-light    
+    );
+  padding-top: 2rem;  
+}
+
+.profile {
+  @extend .clearfix;
+  margin-bottom: 2rem;
+}
+.profile-image {
+  @include circle(8rem, $gray);
+}
+.profile-name {
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.profile-ID {
+  margin-bottom: 0;
+}
+
+
+.page-title {  
+  padding-top : 1rem;
+  padding-bottom: .5rem;
+  background: $gray;
+}
+
+//course eval view
+
+.course-info {
+  margin-right: 1em;
+}
+.course-eval-form {
+  padding: 1em;
+  fieldset {    
+    border: none;
+    padding: 0;
+  }
+  .fieldset-title {
+    @extend %label;
+    @include label-layout(
+      $fontsize: 1rem,
+      $padding: 0.25em
+      );
+    @include label-style(
+      $background: $gray-dark,
+      $color: #fff,
+      $radius: 0
+      );
+    margin-bottom: .875em;
+    width: 100%;
+  }
+}
+
+.invalid-field-error {
+  color: $alert-color;
+}
+.prog-block {
+  background: $dark-color;
+  padding-top: 1em;
+}
+.prog-bar {
+  height: 2.375rem;
+}
+
+
+//available courses view
+.available-surveys {
+  padding: 1.5rem;
+  &--card {
+    @include card-container( $background: #fff, // Background color
+    $color: $dark-color, // Text color
+    $border: $card-border, // Border
+    $radius: 4px, // Border radius
+    $shadow: $card-shadow, // Box shadow
+    $padding: 1rem, $margin: 1.5rem // Margin bottom
+    );
+    // This is a card divider
+    &__divider {
+      @include card-divider( $background: $gray, $padding: 1rem);
+      min-height: 3.5rem;
+    }
+    // This is a card section
+    &__section {
+      @include card-section( $padding: 1rem);
+    }
+    .label {
+      margin-left: 1em;
+    }
+    .survey-time {
+      opacity: 0.5;
+    }
+    .in-progress {
+      color: $success-color;
+      opacity: 1;
+    }
+  }
+}

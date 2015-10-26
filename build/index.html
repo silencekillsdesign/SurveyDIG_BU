@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SurveyDIG</title>
+    <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+    <script src="./assets/js/foundation.js"></script>
+    <script src="./assets/js/templates.js"></script>
+    <script src="./assets/js/routes.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </head>
+  <body>
+
+    <div class="grid-frame vertical">
+
+      <!-- primary title bar -->
+      <div class="grid-block vertical shrink collapse">
+        <div class="primary title-bar">
+          <span class="center title">surveyDIG</span>
+          <span zf-toggle="menu" class="left hide-for-large">MENU</span>
+          <span zf-open="account" class="right">ACCOUNT</span>          
+        </div>
+      </div>
+
+      <div class="grid-block">
+        
+        
+
+        <!-- sidebar menu (NEEDS TO APPEAR DARK AT SMALL SIZES) -->
+        <zf-panel id="menu" position="left" class="vertical large-grid-block large-2 ">
+          <div class="grid-block vertical my-sidebar">
+            <div class="grid-block vertical shrink">
+              <p class="my-sidebar--logo"><img src="assets/img/rt-logo.png" class=""> </p>
+            </div>
+            <div class="grid-block vertical ">
+              <ul class="menu-bar dark vertical">
+                <li ui-sref-active="is-active"><a ui-sref="home" href="#">Home</a></li>
+                <li ui-sref-active="is-active"><a ui-sref="course-eval" href="#">Course Eval</a></li>
+                <li ui-sref-active="is-active"><a ui-sref="available-surveys" href="#">Available Surveys <span class="success badge">4</span></a></li>              
+                <li ui-sref-active="is-active"><a href="#">Item</a></li>
+              </ul>
+            </div>
+          </div>
+        </zf-panel>
+        <!-- end sidebar menu -->
+
+        <!-- sidebar menu -->
+<!--
+        <aside class="large-grid-block large-2 vertical sidebar collapse">
+          <zf-panel id="menu" position="left" class="large-grid-content sidebar">
+            <div class="grid-block vertical shrink">
+              <p class="text-center sidebar--logo"> <img src="assets/img/rt-logo.png" class=""> </p>
+            </div>
+            <ul class="menu-bar vertical dark collapse">
+              <li ui-sref-active="is-active"><a ui-sref="home" href="#">Home</a></li>
+              <li ui-sref-active="is-active"><a ui-sref="course-eval" href="#">Course Eval</a></li>
+              <li ui-sref-active="is-active"><a ui-sref="available-surveys" href="#">Available Surveys</a></li>              
+              <li ui-sref-active="is-active"><a href="#">Item</a></li>
+            </ul>            
+          </zf-panel>          
+        </aside>
+-->
+        <!-- end sidebar menu -->
+        
+
+        
+        <!-- begin content window -->
+        <div ui-view class="grid-block vertical main"></div>
+        <!-- end content window -->
+      </div>
+
+      <!-- include partials -->
+      <div ng-include="'partials/account.html'"></div>
+      <!-- end partials -->
+
+    </div>
+    <!-- END GRID FRAME -->
+  </body>
+</html>
+
+
+
+
+

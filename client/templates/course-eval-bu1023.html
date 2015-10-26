@@ -1,0 +1,150 @@
+---
+name: course-evalBU
+url: /course-evalBU
+title: Course Eval BU
+animationIn: fadeIn
+course-name: The Science of Superheroes
+professor: Dr. Evil
+---
+
+
+<!-- COURSE EVAL -->
+<!--<div class="grid-block vertical">-->
+
+<!-- course info -->
+<div class="grid-block page-title shrink">
+  <div class="grid-content">
+    <h3>The Science of Superheroes</h3>
+  </div>
+  <div class="grid-content shrink">
+    <p class="course-info float-right">PSYX-333</p>
+    <p class="course-info float-right">Dr. Evil</p>
+  </div>      
+</div>
+
+<!--begin eval form -->
+<div class="grid-block" ng-controller="formProgress">
+  <div class="grid-content course-eval-form">
+
+    <form name="masterForm" id="prog-form" ng-valid>        
+
+      <fieldset id="personalInfo" name="personal info">          
+        <legend for="personalInfo" class="fieldset-title">Personal Info</legend>
+
+        <div class="grid-block collapse">            
+          <label ng-model="user.studentID" class="small-12  medium-6 grid-content" for="studentID">
+            <input type="text" id="studentID" placeholder="Student ID #">
+          </label>
+          <label class="small-12  medium-6 grid-content" for="studentEmail">
+            <input type="email" id="studentEmail" placeholder="email address">
+          </label>
+        </div>
+
+        <div class="grid-block collapse">
+          <label class="small-10  large-5 grid-content" for="firstName">
+            <input type="text" id="firstName" placeholder="First Name" name="first name">
+          </label>
+          <label class="small-2 large-1 grid-content" for="middleName">
+            <input type="text" id="middleInitial" placeholder="M.I." name="middle initial">
+          </label>
+          <label class="small-12 large-6 grid-content" for="lastName">
+            <input type="text" id="lastName" placeholder="Last Name" name="last name">
+          </label>                            
+        </div>          
+      </fieldset>
+
+      <fieldset id="studentStatus" name="student status">          
+        <legend for="studentStatus" class="fieldset-title">Student Status</legend>
+
+        <div class="grid-block">            
+          <label class="small-12  medium-6 grid-content" for="">
+            <input type="text" id="" placeholder="Class">              
+          </label>
+          <div class="small-12 medium-6 grid-content">
+            <label for="classStatus">Status of this class in your program</label>
+            <select name="class status" id="classStatus" >                
+              <!--                <option value="title" disabled>Status of this class in your program</option>-->
+              <option value="">Major</option>
+              <option value="">Free Elective</option>
+              <option value="">Other Degree Requirement</option>
+              <option value="">Uncertain</option>
+            </select>
+          </div>
+        </div>    
+      </fieldset>
+
+
+      <div class="grid-block">
+        <div class="small-12 medium-6 grid-content">
+          <label class="floating-label">Input Label</label>
+          <input class="with-floating-label" type="text" required="required" placeholder="Text field">            
+        </div>
+        <div class="small-12 medium-6 grid-content">
+          <label>Select Label</label>
+          <select required="required" name="" id="">
+            <option value="">Breakfast</option>
+            <option value="">Bacon Pancakes</option>
+            <option value="">Mountain Dew</option>
+            <option value="">Scrambled eggs with grilled zucchini, spinach, leeks, roasted tomatoes and mozzarella</option>
+          </select>
+        </div>
+        <div class="small-12 medium-6 grid-content">
+          <label>
+            Prefix/postfix
+            <span class="inline-label">
+              <span class="form-label">www.</span>
+              <input required="required" type="text">
+              <span class="form-label">.com</span>
+            </span>
+          </label>
+        </div>
+        <div class="small-12 medium-6 grid-content">
+          <label>
+            Search
+            <span class="inline-label">
+              <input type="search" placeholder="Search a thing">
+              <a href="#" class="button">Search</a>
+            </span>
+          </label>
+        </div>
+        <div class="small-12 medium-6 grid-content">
+          <label>Choose Your Favorite</label>
+          <input type="radio" name="pokemon" required="required" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+          <input type="radio" name="pokemon" required="required" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+        </div>
+        <div class="small-12 medium-6 grid-content">
+          <label>Check these out</label>
+          <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+          <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+        </div>
+
+        <div class="small-12 medium-6 grid-content">
+          <label>
+            Input Label
+            <input type="text" placeholder="Text field">
+          </label>
+        </div>          
+      </div>
+    </form>
+  </div>
+</div>
+
+<!--progress bar -->
+<div class="grid-block shrink prog-block">
+  <div class="grid-content shrink">
+    <a href="#" class="warning button float-left">Clear Form</a>
+    <a href="#" class="success button float-left" title="Form Progress Saved" content="You may return to this form at any time to complete." color="success" autoclose="3000" zf-notify="saveProgress">Save Progess</a>
+  </div>
+  <div class="grid-content">
+    <progress id="progress" class="high prog-bar" value="" max="100"></progress>
+  </div>
+</div>
+
+<zf-notification-set id="saveProgress" position="bottom-left"></zf-notification-set>
+
+<script type="text/javascript">
+
+</script>
+
+<!--</div>-->
+<!-- END COURSE EVAL -->

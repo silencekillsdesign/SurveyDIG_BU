@@ -1,0 +1,54 @@
+<zf-panel position="right" id="account" class="my-account-panel">
+
+  <div class="grid-block vertical">
+    
+    <div class="grid-content shrink profile">
+      <p class="text-center"><img class="profile-image" src="../assets/img/headshot.jpg"></p>
+      <h4 class="text-center profile-name">John Doe</h4>
+      <p class="text-center profile-ID">ID: 13540213</p>      
+    </div>
+    
+    <div class="grid-content">
+      <section class="block-list">
+        <header>Account info</header>
+        <ul>
+          <li>
+            <input type="text" value="john@here.com">
+          </li>
+          <li>
+            <input type="password" value="password1234">
+          </li>
+        </ul>
+      </section>
+      <section class="block-list">
+        <header>Status</header>
+        <ul>
+          <li>
+            <span>Receive Alerts?</span>
+            <div class="small switch">
+              <input type="checkbox" id="setting1">
+              <label for="setting1"></label>
+            </div>
+          </li>
+          <li>
+            <span>Or This?</span>
+            <div class="small switch">
+              <input type="checkbox" id="setting2">
+              <label for="setting2"></label>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="grid-content shrink">
+      <a title="Acount Information Saved" content="" color="success" autoclose="2000" zf-notify="saved" href="#" class="success button float-left">Save</a>      
+      <a zf-close="account" href="#" class="alert button float-right">Close</a>
+    </div>   
+    
+  </div>
+  
+
+</zf-panel>
+
+<zf-notification-set id="saved" position="bottom-right"></zf-notification-set>

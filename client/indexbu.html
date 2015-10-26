@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trekker</title>
+    <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+    <script src="./assets/js/foundation.js"></script>
+    <script src="./assets/js/templates.js"></script>
+    <script src="./assets/js/routes.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </head>
+  <body>
+
+    <!-- WORKING
+<zf-offcanvas id="menu" position="left" class="">
+<ul class="menu-bar vertical">
+<li><a href="#">Item</a></li>
+<li><a href="#">Item</a></li>
+<li><a href="#">Item</a></li>
+<li><a href="#">Item</a></li>
+</ul>
+</zf-offcanvas>
+-->
+
+    <div class="grid-frame vertical">
+
+      <!-- primary title bar -->
+      <div class="grid-block vertical shrink collapse">
+        <div class="primary title-bar">
+          <span class="center title">Title</span>
+          <span zf-toggle="menu" class="left hide-for-large">MENU</span>
+          <span zf-open="account" class="right">ACCOUNT</span>
+        </div>
+      </div>
+
+      <div class="grid-block" style="border: 4px solid gold;">       
+
+        <!-- sidebar menu -->
+        <aside class="large-grid-block large-2 vertical sidebar" style="border: 3px dashed coral;">
+          <zf-panel id="menu" position="left" class="large-grid-content sidebar" style="padding: 0;">
+            <ul class="menu-bar vertical dark" style="border: 2px dashed dodgerblue;">
+              <li ui-sref-active="is-active"><a ui-sref="home" href="#">Home</a></li>
+              <li ui-sref-active="is-active"><a ui-sref="course-eval" href="#">Course Eval</a></li>
+              <li ui-sref-active="is-active"><a ui-sref="available-surveys" href="#">Available Surveys</a></li>              
+              <li ui-sref-active="is-active"><a href="#">Item</a></li>
+            </ul>
+          </zf-panel>          
+        </aside>
+        <!-- end sidebar menu -->
+
+        <!-- COURSE EVAL -->
+        <!--
+<div class="grid-block large-10 vertical" style="border: 1px solid red;">
+<div class="grid-block medium-up-3 shrink">
+<div class="grid-block">
+<h5>Course Title</h5>
+</div> 
+<div class="grid-block">
+<h5>Course Number</h5>
+</div> 
+<div class="grid-block">
+<h5>Professor</h5>
+</div> 
+</div>
+<div class="grid-content">
+<h2>FORM</h2>
+</div>
+<div class="grid-content shrink prog-block">
+<h5 class="light">Progress</h5>
+<progress class="low" value="60" max="100"></progress>
+</div>
+</div>
+-->
+        <div class="grid-block vertical main">
+          <div ui-view class="grid-block"></div>
+        </div>
+
+        <!--
+<zf-panel position="right" id="account">  
+<div class="grid-content">
+
+<section class="block-list">
+<header>Account info</header>
+<ul>
+<li><input type="text" value="ojhn@here.com"></li>
+<li><input type="password" value="password1234"></li>
+</ul>            
+</section>
+
+<section class="block-list">
+<header>Status</header>
+<ul>
+<li>
+<span>This Class?</span>
+<div class="switch"><input type="checkbox" id="setting1"><label for="setting1"></label></div>
+</li>
+<li>
+<span>Or This?</span>
+<div class="switch"><input type="checkbox" id="setting2"><label for="setting2"></label></div>
+</li>                
+</ul>            
+</section>
+</div>
+<div class="grid-block shrink">    
+<div class="clearfix">
+<a zf-close="account" href="#" class="alert button float-left">Close</a>
+<a href="#" class="success button float-right">Save</a>
+</div>
+</div>
+</zf-panel>
+-->
+      </div>
+
+      <div ng-include="'partials/account.html'">
+      </div>
+
+    </div>
+    <!-- END GRID FRAME -->
+  </body>
+</html>
+
+
+
+
+

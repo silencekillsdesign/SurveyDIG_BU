@@ -1,0 +1,74 @@
+
+
+<div class="grid-block vertical shrink">  
+  <div class="grid-content page-title">
+    <h3>Available Surveys</h3>  
+  </div>
+</div>
+    
+<div class="grid-content wrap available-surveys">
+  
+  <div class="available-surveys--card">    
+    <div class="available-surveys--card__divider">
+      <p class="float-left">10/06/2015</p>
+      <span class="success label">In Progress</span>
+      <p class="survey-time in-progress float-right">~3 min remaining</p>
+    </div>
+    <div class="card-section">
+      <h4>The Science of Superheroes</h4>
+      <p class="clearfix">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+      <a ui-sref="course-eval" class="button success" href="#">Resume Survey</a>
+      <a zf-open="optOut" class="button alert" href="#">Opt Out</a>
+    </div>
+  </div>
+  
+  <div class="available-surveys--card">    
+    <div class="available-surveys--card__divider">
+      <p class="float-left">10/06/2015</p>
+      <span class="alert label">Required</span>
+      <span class="success label">In Progress</span>
+      <p class="survey-time in-progress float-right">~10 min</p>
+    </div>
+    <div class="card-section">
+      <h4>The Balance of Good and Evil</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iusto reprehenderit voluptatem odio deleniti provident aliquam qui magnam aspernatur necessitatibus.</p>
+      <a ui-sref="course-eval" class="button success" href="#">Resume Survey</a>
+      <a class="button disabled" href="#">Opt Out</a>
+    </div>
+  </div>
+  
+  <div class="available-surveys--card">    
+    <div class="available-surveys--card__divider">
+      <p class="float-left">10/06/2015</p>
+      <span class="warning label">Survey Closing Soon</span>
+      <p class="survey-time float-right">~10 min</p>
+    </div>
+    <div class="card-section">
+      <h4>Things that are Ok with the World</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iusto reprehenderit voluptatem odio deleniti provident aliquam qui magnam aspernatur necessitatibus.</p>
+      <a ui-sref="course-eval" class="button success" href="#">Begin Survey</a>
+      <a zf-open="optOut" class="button alert" href="#">Opt Out</a>
+    </div>
+  </div>
+  
+  <div class="available-surveys--card" id="survey-4">    
+    <div class="available-surveys--card__divider">
+      <p class="float-left">10/06/2015</p>      
+    </div>
+    <div class="card-section">
+      <h4>Understanding Cartoons</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi iusto reprehenderit voluptatem odio deleniti provident aliquam qui magnam aspernatur necessitatibus.</p>
+      <a ui-sref="course-eval" class="button success" href="#">Begin Survey</a>
+      <a zf-open="optOut" class="button alert" href="#">Opt Out</a>
+    </div>
+  </div>
+  
+  
+  <!-- start modal for opt out -->
+  <zf-modal id="optOut" overlay="true" overlay-close="false" class="tiny dialog">
+    <h4>Are you sure you would like to opt out of this survey?</h4>
+    <a zf-close="" class="alert button">Yes</a>
+    <a zf-close="" class="secondary button">No</a>
+  </zf-modal>
+
+</div>
